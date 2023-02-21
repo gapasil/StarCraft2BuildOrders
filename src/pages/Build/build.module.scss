@@ -1,0 +1,64 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background: url("../../globalimg/background.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+
+    h1{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    @media screen and (max-width: 930px) {
+        padding-top: 0px;
+    }  
+
+    &__blockBuild{
+        padding: 0px 15px 0px 15px;
+        width: 60%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.950);
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &__logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        p{
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        &__buildOrder{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p{
+                margin: 10px 0px 10px 0px;
+            }
+        }
+        @media screen and (max-width: 930px) {
+            img{
+                width: 100%;
+            }
+        }  
+    }
+    @media screen and (max-width: 1300px) {
+        &__blockBuild{
+            width: 90%;
+        }
+    }   
+}
