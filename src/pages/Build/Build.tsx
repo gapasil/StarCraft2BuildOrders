@@ -13,6 +13,11 @@ export const Build: FC = () => {
   const [ buildNotFound, setBuildNotFound ] = useState<BuildType>()
   const [ build     , setBuild      ] = useState<BuildType>()
 
+  useEffect(()=>{
+    console.log(build);
+    console.log(buildNotFound);
+  },[build,buildNotFound])
+
   const compareBuild = (build: BuildType) =>{
     if(
       build.difficulty == resultTest.difficulty 
@@ -111,7 +116,12 @@ export const Build: FC = () => {
               )
             })}
           </div>
-          <iframe width="98%" height="315" src={build.link} title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          {
+            build.link?
+              <iframe width="98%" height="315" src={build.link} title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            :
+              <></>
+          }
         </div>
       </div>
     ) 
@@ -144,7 +154,12 @@ export const Build: FC = () => {
               )
             })}
           </div>
-          <iframe width="98%" height="315" src={buildNotFound.link} title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          {
+            buildNotFound.link?
+              <iframe width="98%" height="315" src={buildNotFound.link} title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            :
+              <></>
+          }        
         </div>
       </div>
     )
