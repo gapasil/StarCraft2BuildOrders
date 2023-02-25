@@ -1,8 +1,8 @@
 import React, {FC} from 'react'
 import style from "./test.module.scss"
-import TerranBackground from "./TerranBackground.mp4"
-import ZergBackground   from "./ZergBackground.mp4"
-import ProtosBackground from "./ProtosBackground.mp4"
+import TerranBackground from "./Terran.mp4"
+import ZergBackground   from "./Zerg.mp4"
+import ProtosBackground from "./Protos.mp4"
 import { QuestionTest } from '../QuestionsTest/QuestionTest';
 
 export const Test: FC<{Race: string}> = ({Race}) => {
